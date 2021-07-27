@@ -1,0 +1,8 @@
+FROM golang:alpine:3.13.1
+
+WORKDIR /app/go-sample-app
+
+COPY /go /app/go-sample-app
+
+CMD ["go", "run", "hello.go"]
+
