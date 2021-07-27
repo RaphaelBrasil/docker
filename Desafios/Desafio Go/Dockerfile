@@ -2,7 +2,7 @@ FROM golang:rc-alpine as builder
 
 WORKDIR /go/src/app
 
-COPY /go .
+COPY . .
 
 RUN go build -o /app hello.go
 
