@@ -1,1 +1,3 @@
+.gitignore
 mysql/
+node/nodemodules/
