@@ -23,6 +23,9 @@ WHERE NOT EXISTS (
 
 const mysql = require("mysql");
 const connection = mysql.createConnection(config);
+connection.query(
+  "CREATE TABLE IF NOT EXISTS people(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL) ENGINE=InnoDB;"
+);
 
 connection.query(sql1, function (err, result) {
   if (err) throw err;
